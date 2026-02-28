@@ -1,0 +1,141 @@
+import turtle
+import random
+wn = turtle.Screen()
+wn.bgcolor("black")
+wn.tracer(0)
+
+
+
+cole = turtle.Turtle()
+cole.speed(0)
+def draw_stars():
+    for _ in range(300):
+        x = random.randint(-500, 500)
+        y = random.randint(-500, 500)
+        cole.penup()
+        cole.goto(x, y)
+        cole.dot(random.randint(1, 3), "white")
+
+
+draw_stars()
+
+mari = turtle.Turtle()
+mari.pensize(1)
+mari.speed(0)
+
+
+circle_colors = ["lightpink","mediumpurple","blue","lightblue"]
+
+
+def draw_circles ():
+    for i in range (36):
+        mari.up
+        mari.goto(0,180)
+        current_color = circle_colors [i % 4]
+        mari.color(current_color)
+        mari.circle(70)
+        mari.left(10)
+
+draw_circles()
+
+
+
+
+
+alex = turtle.Turtle()
+alex.color("cornflowerblue")
+alex.speed(0)
+alex.pensize(2)
+
+
+
+
+def draw_feathers (x,y):
+    alex.penup()
+    alex.goto(x,y)
+    alex.pendown()
+    alex.setheading(270)
+    alex.forward(150)
+
+    length = 50
+    angle = 45
+
+    for i in range (20): 
+        alex.forward(5)
+        alex.left(angle)             
+        alex.forward(length)     
+        alex.backward(length)    
+
+        alex.right(angle * 2)         
+        alex.forward(length)     
+        alex.backward(length)    
+
+        alex.left(angle)
+        length = length - 2.5
+
+draw_feathers (0,-10)
+draw_feathers (-80,60)
+draw_feathers (80, 60)
+
+
+
+alice = turtle.Turtle()
+alice.speed(0)
+alice.hideturtle()
+alice.color("palegoldenrod")
+
+
+def draw_sun ():
+    alice.penup()
+    alice.goto(97,280)
+    alice.pendown()
+    for _ in range(12):
+        alice.begin_fill()
+        alice.forward(72)   
+        alice.right(120)    
+        alice.forward(72)   
+        alice.left(90)
+        alice.end_fill()
+        
+draw_sun()
+
+
+def draw_beads (x,y): 
+    alice.penup()
+    alice.goto(x,y)
+    alice.pendown()
+    alice.dot((20),'mediumturquoise')
+
+
+draw_beads(0,-160)
+draw_beads(-80,-90)
+draw_beads(80,-90)
+
+
+def draw_outer_circle():
+    mari.color('darkgoldenrod')
+    mari.pensize(10)
+    mari.penup()
+    mari.goto(0,48)
+    mari.pendown()
+    mari.circle(136)
+
+draw_outer_circle()
+
+
+def draw_moon ():
+    alice.penup()
+    alice.color("white")
+    alice.goto(300,300)
+    alice.pendown()
+    alice.begin_fill()
+    alice.circle(70)
+    alice.end_fill()
+    
+    
+
+draw_moon()
+
+wn.update()
+
+wn.mainloop()

@@ -21,3 +21,4 @@ The drawing is broken down into:
 # Bound Ring (`draw_outer_circle`): A bold outer circle that ties the mandala elements together.
 
 
+<img width="2242" height="1810" alt="image" src="https://github.com/user-attachments/assets/2beb8096-23a1-409a-9395-c262d08a8bf4" />
